@@ -1,2 +1,4 @@
 PrivateContainerRegistry: "localhost:5001/"
+PubSubType: "Redis" # Redis, RabbitMq
 RedisPort: 6379
+RabbitMqPort: 5672

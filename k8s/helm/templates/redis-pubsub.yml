@@ -1,3 +1,4 @@
+{{- if eq .Values.PubSubType "Redis" -}}
 apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:
@@ -8,3 +9,4 @@ spec:
   metadata:
     - name: redisHost
       value: redis-service:6379
+{{- end }}

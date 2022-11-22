@@ -1,8 +1,15 @@
 # Introduction
 
-PubSub example using the DAPR pubsub building block with a Redis implementation. 
+PubSub example using the DAPR pubsub building block. The example can be configured to use Redis or RabbitMq for the pubsub functionality.    
 
 # Running in a local KinD cluster
+
+The default pubsub implementation uses 'RabbitMq'. To use something else up change the PUB_SUB_TYPE variable in the ./k8s/deploy_local.sh script:
+
+```shell
+# Can be: Redis, RabbitMq
+PUB_SUB_TYPE=Redis
+```
 
 Make sure you have created a local (KinD) k8s cluster with a private docker registry available at http://localhost:5001/. Then run the following script to deploy the app to the cluster: 
 

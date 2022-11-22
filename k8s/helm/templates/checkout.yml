@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
         - name: checkout
-          image: {{ .Values.PrivateContainerRegistry }}dnw-dapr-pubsub-checkout:latest
+          image: "{{ .Values.PrivateContainerRegistry }}dnw-dapr-pubsub-checkout:latest"
           ports:
             - containerPort: 5050
