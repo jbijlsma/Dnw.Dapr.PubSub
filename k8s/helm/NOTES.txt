@@ -1,0 +1,7 @@
+helm template '.' --output-dir '.yamls'
+
+helm upgrade dapr-pubsub . --dry-run --debug --install
+
+helm upgrade dapr-pubsub . --install
+
+helm delete dapr-pubsub

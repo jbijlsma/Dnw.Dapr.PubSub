@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnw.Dapr.PubSub.Checkout", "Dnw.Dapr.PubSub.Checkout\Dnw.Dapr.PubSub.Checkout.csproj", "{FE3B25EB-36FB-4C7A-B960-1F642577837C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnw.Dapr.PubSub.OrderProcessor", "Dnw.Dapr.PubSub.OrderProcessor\Dnw.Dapr.PubSub.OrderProcessor.csproj", "{8B97FC2A-966A-4F0D-BBE4-F65DDB70964C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE3B25EB-36FB-4C7A-B960-1F642577837C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE3B25EB-36FB-4C7A-B960-1F642577837C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE3B25EB-36FB-4C7A-B960-1F642577837C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE3B25EB-36FB-4C7A-B960-1F642577837C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B97FC2A-966A-4F0D-BBE4-F65DDB70964C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B97FC2A-966A-4F0D-BBE4-F65DDB70964C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B97FC2A-966A-4F0D-BBE4-F65DDB70964C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B97FC2A-966A-4F0D-BBE4-F65DDB70964C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
