@@ -16,7 +16,7 @@ WORKDIR /app
 COPY --from=build /app .
 
 # Configure kestrel
-ENV ASPNETCORE_URLS=http://+:5051
+ENV ASPNETCORE_URLS=http://+:5050
 ENV ASPNETCORE_ENVIRONMENT=Production
 
 ENTRYPOINT [ "./Dnw.Dapr.PubSub.OrderProcessor" ]

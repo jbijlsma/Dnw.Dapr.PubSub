@@ -14,22 +14,10 @@ spec:
       annotations:
         dapr.io/enabled: "true"
         dapr.io/app-id: "order-processor"
-        dapr.io/app-port: "5051"
+        dapr.io/app-port: "5050"
     spec:
       containers:
         - name: order-processor
           image: {{ .Values.PrivateContainerRegistry }}dnw-dapr-pubsub-order-processor:latest
           ports:
-            - containerPort: 5051
----
-#apiVersion: v1
-#kind: Service
-#metadata:
-#  name: order-processor-service
-#spec:
-#  type: ClusterIP
-#  selector:
-#    app: order-processor
-#  ports:
-#    - port: 3001
-#      targetPort: 5050
+            - containerPort: 5050
