@@ -1,0 +1,16 @@
+{{- if eq .Values.PubSubType "Kafka" -}}
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub
+spec:
+  type: pubsub.kafka
+  version: v1
+  metadata:
+    - name: brokers
+      # Comma separated list of kafka brokers
+      value: "kafka-service:{{ .Values.KafkaPort }}"
+    - name: authRequired
+      # Enable auth. Default is "false"
+      value: "false"
+{{- end }}

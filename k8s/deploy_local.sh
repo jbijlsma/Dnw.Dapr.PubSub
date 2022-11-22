@@ -3,7 +3,7 @@
 # Define variables
 RELEASE_NAME=dnw-dapr-pubsub
 
-# Can be: Redis, RabbitMq
+# Can be: Redis, RabbitMq or Kafka
 PUB_SUB_TYPE=RabbitMq
 
 # Preload 3rd party images
@@ -25,11 +25,14 @@ then
   kind load docker-image rabbitmq:3.11-management
 fi
 
-#docker pull confluentinc/cp-zookeeper:7.3.0
-#kind load docker-image confluentinc/cp-zookeeper:7.3.0
-
-#docker pull confluentinc/cp-kafka:7.3.0
-#kind load docker-image confluentinc/cp-kafka:7.3.0
+if [ $PUB_SUB_TYPE = "Kafka" ]
+then
+  docker pull confluentinc/cp-zookeeper:7.3.0
+  kind load docker-image confluentinc/cp-zookeeper:7.3.0
+  
+  docker pull confluentinc/cp-kafka:7.3.0
+  kind load docker-image confluentinc/cp-kafka:7.3.0
+fi
 
 # Build images, tag them and push them to the local registry
 TAG="localhost:5001/$RELEASE_NAME-checkout:latest"
