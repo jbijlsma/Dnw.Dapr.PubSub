@@ -31,10 +31,16 @@ Next set up port-forwarding for the publisher (Dnw.Dapr.PubSub.Checkout):
 kubctl port-forward -n dnw-dapr-pubsub checkout-deployment-xxx 5050:5050
 ```
 
-Then use curl to publishing a message:
+Then use curl to publish a message:
 
 ```shell
-curl http://localhost:5050/publish-message
+curl http://localhost:5050/publish-order
+```
+
+Or for testing a direct service invocation:
+
+```shell
+curl http://localhost:5050/order
 ```
 
 Verify if the order-processor (Dnw.Dapr.PubSub.OrderProcessor) received the message:
