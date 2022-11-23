@@ -1,4 +1,4 @@
-{{- if eq .Values.PubSubType "Redis" -}}
+{{/*{{- if eq .Values.PubSubType "Redis" -}}*/}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -30,4 +30,4 @@ spec:
   ports:
     - port: {{ .Values.RedisPort }}
       targetPort: {{ .Values.RedisPort }}
-{{- end }}
+{{/*{{- end }}*/}}

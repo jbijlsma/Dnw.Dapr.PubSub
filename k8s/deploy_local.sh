@@ -45,6 +45,11 @@ echo "TAG=$TAG"
 docker build -t $TAG -f ../Dnw.Dapr.PubSub.OrderProcessor/Dockerfile ../Dnw.Dapr.PubSub.OrderProcessor
 docker push $TAG
 
+TAG="localhost:5001/$RELEASE_NAME-actors:latest"
+echo "TAG=$TAG"
+docker build -t $TAG -f ../Dnw.Dapr.PubSub.Actors/Dockerfile ../Dnw.Dapr.PubSub.Actors
+docker push $TAG
+
 # Install app into k8s cluster
 helm upgrade "$RELEASE_NAME" ./helm \
   --install \
@@ -55,3 +60,4 @@ helm upgrade "$RELEASE_NAME" ./helm \
 # Restart the deployments
 kubectl rollout restart "deployment/checkout-deployment" -n "$RELEASE_NAME"
 kubectl rollout restart "deployment/order-processor-deployment" -n "$RELEASE_NAME"
+kubectl rollout restart "deployment/actors-deployment" -n "$RELEASE_NAME"

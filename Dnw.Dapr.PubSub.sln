@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnw.Dapr.PubSub.Checkout", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnw.Dapr.PubSub.OrderProcessor", "Dnw.Dapr.PubSub.OrderProcessor\Dnw.Dapr.PubSub.OrderProcessor.csproj", "{8B97FC2A-966A-4F0D-BBE4-F65DDB70964C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnw.Dapr.PubSub.Actors", "Dnw.Dapr.PubSub.Actors\Dnw.Dapr.PubSub.Actors.csproj", "{6B33768D-9047-4023-AD62-5F7BFE3822AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{8B97FC2A-966A-4F0D-BBE4-F65DDB70964C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B97FC2A-966A-4F0D-BBE4-F65DDB70964C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B97FC2A-966A-4F0D-BBE4-F65DDB70964C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B33768D-9047-4023-AD62-5F7BFE3822AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B33768D-9047-4023-AD62-5F7BFE3822AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B33768D-9047-4023-AD62-5F7BFE3822AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B33768D-9047-4023-AD62-5F7BFE3822AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
