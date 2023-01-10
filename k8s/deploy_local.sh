@@ -7,11 +7,11 @@ RELEASE_NAME=dnw-dapr-pubsub
 PUB_SUB_TYPE=RabbitMq
 
 # Preload 3rd party images
-docker pull mcr.microsoft.com/dotnet/sdk:6.0-alpine
-kind load docker-image mcr.microsoft.com/dotnet/sdk:6.0-alpine
+docker pull mcr.microsoft.com/dotnet/sdk:7.0-alpine
+kind load docker-image mcr.microsoft.com/dotnet/sdk:7.0-alpine
 
-docker pull mcr.microsoft.com/dotnet/aspnet:6.0-alpine
-kind load docker-image mcr.microsoft.com/dotnet/aspnet:6.0-alpine
+docker pull mcr.microsoft.com/dotnet/aspnet:7.0-alpine
+kind load docker-image mcr.microsoft.com/dotnet/aspnet:7.0-alpine
 
 if [ $PUB_SUB_TYPE = "Redis" ]
 then
